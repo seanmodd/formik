@@ -1,13 +1,13 @@
-import React from 'react'
-import './App.css'
-import YoutubeForm from './components/YoutubeForm'
+import React from 'react';
+import './App.css';
+import YoutubeForm from './components/YoutubeForm';
 
-function App () {
+function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <YoutubeForm />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

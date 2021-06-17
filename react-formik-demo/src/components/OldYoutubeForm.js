@@ -32,7 +32,7 @@ const onSubmit = values => {
 //   return errors
 // }
 
-const validationSchema = Yup.object({
+      const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
   email: Yup.string()
     .email('Invalid email format')
