@@ -1,11 +1,10 @@
-import React from 'react';
+import SeanFirstForm from './components/SeanFirstForm'
 import './App.css';
-import YoutubeForm from './components/YoutubeForm';
 
 function App() {
   return (
     <div className="App">
-      <YoutubeForm />
+    <SeanFirstForm />
     </div>
   );
 }
