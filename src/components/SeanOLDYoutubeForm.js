@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
 import * as React from 'react';
 import { Button, FormLabel } from '@material-ui/core';
 import { useFormik } from 'formik';
@@ -14,6 +12,24 @@ const initialValues = {
 const onSubmit = (values) => {
   console.log(values);
 };
+
+// const validate = (values) => {
+//   const errors = {};
+
+//   if (!values.name) {
+//     errors.name = 'Required';
+//   }
+
+//   if (!values.email) {
+//     errors.email = 'Required';
+//   }
+
+//   if (!values.channel) {
+//     errors.channel = 'Required';
+//   }
+
+//   return errors;
+// };
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Required!!!!!!'),
@@ -37,7 +53,9 @@ export default function App() {
             type="text"
             id="name"
             name="name"
-            {...formik.getFieldProps('name')}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
           />
           {formik.touched.name && formik.errors.name ? (
             <div>{formik.errors.name}</div>
@@ -48,7 +66,9 @@ export default function App() {
             type="email"
             id="email"
             name="email"
-            {...formik.getFieldProps('email')}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
           />
           {formik.touched.email && formik.errors.email ? (
             <div>{formik.errors.email}</div>
@@ -59,7 +79,9 @@ export default function App() {
             type="text"
             id="channel"
             name="channel"
-            {...formik.getFieldProps('channel')}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.channel}
           />
           {formik.touched.channel && formik.errors.channel ? (
             <div>{formik.errors.channel}</div>
