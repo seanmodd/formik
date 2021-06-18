@@ -1,13 +1,27 @@
-import React from 'react';
-import {Button} from '@material-ui/core';
+import * as React from 'react';
 
-const SeanFirstForm = () => (
-  <div>
-    <h1>This is a Header</h1>
+import { Button, FormLabel } from '@material-ui/core';
 
-    <Button variant="contained" color="primary">Hello World</Button>
-    <h6>This is a Header</h6>
-  </div>
-);
+export default function App() {
+  return (
+    <>
+      <div>
+        <h1>YouTube Formik Tutorial</h1>
+        <form>
+          <FormLabel htmlFor="name">Name</FormLabel>
+          <input type="text" id="name" name="name" />
 
-export default SeanFirstForm;
+          <FormLabel htmlFor="email">Email</FormLabel>
+          <input type="email" id="email" name="email" />
+
+          <FormLabel htmlFor="channel">Channel</FormLabel>
+          <input type="text" id="channel" name="channel" />
+
+          <Button variant="contained" color="primary">
+            Submit
+          </Button>
+        </form>
+      </div>
+    </>
+  );
+}

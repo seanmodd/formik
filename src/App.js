@@ -1,10 +1,10 @@
-import SeanFirstForm from './components/SeanFirstForm'
+import SeanFirstForm from './components/SeanFirstForm';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <SeanFirstForm />
+      <SeanFirstForm />
     </div>
   );
 }
