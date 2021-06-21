@@ -21,31 +21,31 @@ const validationSchema = Yup.object({
 });
 export default function SeanFirstForm() {
   return (
-    <>
-      <div>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={onSubmit}
-        >
-          <>
-            <h1>YouTube Formik Tutorial</h1>
-            <Form className="form-control">
-              <Field type="text" id="name" name="name" />
-              <ErrorMessage name="name" />
 
-              <Field type="email" id="email" name="email" />
-              <ErrorMessage name="email" />
+    <div>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
 
-              <Field type="text" id="channel" name="channel" />
-              <ErrorMessage name="channel" />
-              <button type="submit" variant="contained" color="primary">
-                Submit
-              </button>
-            </Form>
-          </>
-        </Formik>
-      </div>
-    </>
+        <h1>YouTube Formik Tutorial</h1>
+        <Form className="form-control">
+          <Field type="text" id="name" name="name" />
+          <ErrorMessage name="name" />
+
+          <Field type="email" id="email" name="email" />
+          <ErrorMessage name="email" />
+
+          <Field type="text" id="channel" name="channel" />
+          <ErrorMessage name="channel" />
+          <button type="submit" variant="contained" color="primary">
+            Submit
+          </button>
+        </Form>
+
+      </Formik>
+    </div>
+
   );
 }
