@@ -15,19 +15,15 @@ const onSubmit = (values) => {
 
 // const validate = (values) => {
 //   const errors = {};
-
 //   if (!values.name) {
 //     errors.name = 'Required';
 //   }
-
 //   if (!values.email) {
 //     errors.email = 'Required';
 //   }
-
 //   if (!values.channel) {
 //     errors.channel = 'Required';
 //   }
-
 //   return errors;
 // };
 
@@ -40,6 +36,7 @@ export default function App() {
   const formik = useFormik({
     initialValues,
     onSubmit,
+    // validate,
     validationSchema,
   });
 

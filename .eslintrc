@@ -1,9 +1,7 @@
 {
   "extends": [
-    "wesbos"
+    "recommended"
   ],
   "rules": {
     "no-unused-vars": 1,
-    "react/jsx-props-no-spreading": "on",
   }
-}
