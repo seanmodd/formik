@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Paper } from '@material-ui/core'
+import { Button, ButtonGroup, Box, Container, Paper } from '@material-ui/core'
 // import { MenuIcon } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,28 +13,27 @@ export default function Create() {
   return (
     <div>
 
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit">
-            Photos
-          </Typography>
-        </Toolbar>
-      </AppBar>
-
 
       <AppBar component="div" alignItems="center" justifyContent="center" width={10} elevation={10}>
-        <Typography variant="body" align="center">
+        <Typography variant="button" align="center">
           Create page
         </Typography>
       </AppBar>
-      <Typography variant="h5" color="" align="center">
-        Create a new note.lorem
-      </Typography>
+      <Container>
+        <Typography variant="h1" display="block" color="" align="center" >
+          Create a new note.
+        </Typography>
+        <Button variant="contained" color="secondary" type="submit" onClick={() => console.log("you clicked me")}>Submit</Button>
 
 
+        <ButtonGroup color="secondary" >
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
+      </Container>
     </div>
   )
 }
+
+
